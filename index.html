@@ -23,7 +23,7 @@
         </button>
         <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
         <div class="collapse navbar-collapse" id="Navbar">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav mr-auto">
               <li class="nav-item active"><a class="nav-link" href="#">
                 <span class="fa fa-home fa-lg"></span> Home</a></li>
               <li class="nav-item"><a class="nav-link" href="./aboutus.html">
@@ -33,10 +33,47 @@
               <li class="nav-item"><a class="nav-link" href="./contactus.html">
                 <span class="fa fa-address-card fa-lg"></span>Contact</a></li>
           </ul>
+          <span class="navbar-text">
+              <a data-toggle="modal" data-target="#loginModal" href="">
+              <span class="fa fa-sign-in"></span>Login</a>
+          </span>
         </div>
       </div>
     </nav>
-    <!-- Assignment 2, Task 3: adding a block-sized button -->
+
+    <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                </div>
+            </div>
+            </div>
+    </div>
+    
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -48,7 +85,9 @@
                     <img src="img\logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-sm btn-block btn-warning" href="#reserveTable">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" 
+                        data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -74,8 +113,7 @@
             </div>
         </div>
 
-        <!-- Assignment 2, Task 2: second row  -->
-        <div class="row row-content align-items-center">
+         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3 flex-first">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -113,7 +151,7 @@
                 </div>            
             </div>
         </div>
-        <!-- Assignment 2, Task 1: new row, card, form  -->
+
         <div class="row row-content justify-content-sm-center" id="reserveTable">
             <div class="col-12 col-sm-8">
                 <div class="card">
@@ -230,6 +268,11 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script>    
 </body>
 
 </html>
