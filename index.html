@@ -74,6 +74,97 @@
             </div>
     </div>
 
+    <!-- *************** Assignment 3 *************** -->
+    <div  id="reservemodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Reserve a Table</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                                <label for="optionsRadios1" class="col-12 col-md-2 col-form-label">Number of Guests</label>
+                                <fieldset class="form-group col-12 col-md-10">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
+                                                                id="optionsRadios1" value="option1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
+                                                                id="optionsRadios2" value="option2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
+                                                                id="optionsRadios3" value="option3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios"
+                                                                id="optionsRadios4" value="option4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios"
+                                                                id="optionsRadios5" value="option5">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="optionsRadios"
+                                                                id="optionsRadios6" value="option6">6</label>
+                                    </div>
+                                </fieldset>
+                        </div>
+                        <div class="form-group row">
+                            <label for="sectionradio" class="col-12 col-md-2 col-form-label">Section</label>
+                            <div class="col-12 col-sm-4 col-md-4">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="sectionradio" id="option1" value="nonsmoker" autocomplete="off" checked>Non-Smoking
+                                    </label>
+                                    <label class="btn btn-success">
+                                        <input type="radio" name="sectionradio" id="option2" value="smoker" autocomplete="off">Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="tabledate" class="col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-12 col-sm-4 col-md-4">
+                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control" id="tabledate" name="tabledate" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-4">
+                                <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-clock-o"></i>
+                                        </div>
+                                        <input type="text" class="form-control" id="tabletime" name="tabletime" placeholder="Time">
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-6">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -85,9 +176,8 @@
                     <img src="img\logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" 
-                        data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-sm btn-block" 
+                       data-toggle="modal" data-target="#reservemodal" href="">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -203,77 +293,6 @@
             </div>
         </div>
 
-        <div class="row row-content justify-content-sm-center" id="reserveTable">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header card-inverse card-warning text-white">Reserve a Table</h3>
-                    <div class="card-block">
-                        <form>
-                            <div class="form-group row">
-                                <label for="optionsRadios1" class="col-12 col-md-2 col-form-label">Number of Guests</label>
-                                <fieldset class="form-group col-12 col-md-10">
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
-                                                                id="optionsRadios1" value="option1">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
-                                                                id="optionsRadios2" value="option2">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios" 
-                                                                id="optionsRadios3" value="option3">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios"
-                                                                id="optionsRadios4" value="option4">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios"
-                                                                id="optionsRadios5" value="option5">5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label">
-                                                            <input type="radio" class="form-check-input" name="optionsRadios"
-                                                                id="optionsRadios6" value="option6">6</label>
-                                    </div>
-                                </fieldset>
-                            </div>
-                            <div class="form-group row">
-                                <label for="tabledate" class="col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-12 col-sm-4 col-md-4">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control" id="tabledate" name="tabledate" placeholder="Date">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4 col-md-4">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-clock-o"></i>
-                                        </div>
-                                        <input type="text" class="form-control" id="tabletime" name="tabletime" placeholder="Time">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-5 col-sm-4 col-md-3">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -319,11 +338,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-         });
-    </script>    
 </body>
 
 </html>
