@@ -1,7 +1,8 @@
 $lt-gray: #ddd;
-$background-dark: #D2BA58;
-$background-light: rgb(109, 91, 59);
-$background-pale: #D7C789;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
 
 // Height variables
 $carousel-item-height: 300px;
@@ -69,4 +70,21 @@ body{
     right:0px;
     position: absolute;
     bottom: 0px;
+}
+
+//Assignment 4: Modal style background colors and text header color
+.modal {
+    .modal-header{
+        background:$background-dark;
+        color: floralwhite;
+        .close{
+            color: floralwhite;
+        }
+    }
+    .modal-body{
+        background:$background-pale;
+    }
+    .modal-footer{
+        background:$background-light;
+    }
 }

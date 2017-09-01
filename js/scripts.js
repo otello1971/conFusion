@@ -12,4 +12,12 @@
                     $("#carousel-button").children("span").addClass("fa-pause");
                 }
             });
+//Assignment 4: JQuery
+            $("#reserve-button").click(function(){
+                $('#reserveModal').modal('show');
+            });
+
+            $("#login-link").click(function(){
+                $('#loginModal').modal('show');
+            });
         });
